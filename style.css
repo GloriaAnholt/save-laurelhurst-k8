@@ -491,6 +491,9 @@ a.num:hover { color: var(--red); }
 .cs-label { font: 800 13px/1.2 var(--label); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .cs-num { font: 900 clamp(34px, 5vw, 48px)/1 var(--label); font-variant-numeric: tabular-nums; }
 .cs-item.now .cs-num { color: var(--blue); }
+.cs-item.below { border-color: var(--red); }
+.cs-item.below .cs-num { color: var(--red); }
+.points-lede { margin: 0; max-width: 44em; font-size: 18px; }
 .cs-note { font-size: 16px; color: var(--muted); }
 .cs-arrow { align-self: center; font: 900 36px/1 var(--label); color: var(--red); }
 @media (max-width: 560px) { .cs-arrow { transform: rotate(90deg); margin: -4px auto; } }
