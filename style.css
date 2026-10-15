@@ -128,6 +128,7 @@ a:hover { color: var(--red); }
 .nav a[aria-current="page"] { box-shadow: inset 0 -4px 0 var(--gold-bright); }
 .nav a[aria-current="page"]:hover { box-shadow: none; }
 
+.nav li.nav-extra { display: none; }
 @media (max-width: 860px) {
   .nav .wrap { flex-direction: column; }
   .nav-toggle { display: inline-flex; }
@@ -566,6 +567,15 @@ a.num:hover { color: var(--red); }
 .why-card .stat { color: var(--gold-bright); }
 .why-card p { color: var(--on-dark-muted); }
 .why-card .more { color: var(--gold-bright); }
+
+/* positives in the phone menu */
+@media (max-width: 860px) {
+  .nav.open li.nav-extra { display: flex; background: var(--blue); }
+  .nav li.nav-extra-head { border-top: 3px solid var(--gold); margin-top: 6px; }
+  .nav-extra-head span { padding: 12px 8px 6px; font: 800 12px/1 var(--label); letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-dark-muted); }
+  .nav-extra a { color: var(--gold-bright); }
+  .nav li.nav-extra + li.nav-extra { border-top-color: rgba(255, 255, 255, 0.14); }
+}
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--blue-deep); color: var(--on-dark-muted); }
