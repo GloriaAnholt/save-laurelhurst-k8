@@ -1,7 +1,15 @@
-# save-laurelhurst-k8
-A data-driven rebuttal to PPS's plans to convert Laurelhurst into a K-5
+# Save Laurelhurst K-8
 
+A fact-based website from Laurelhurst parents on the Portland Public Schools rightsizing proposal to convert Laurelhurst from a K-8 to a K-5.
 
-The Laurelhurst lion logo is owned by Laurelhurst/PPS, not the author of this site, and is not covered under the CCO 1.0 license. You'll have to check with PPS for more info.
+Plain static HTML and CSS served by GitHub Pages. There is no build step.
 
-This site was generated with the help of Claude Opus 5.5, but its author is a web engineer with a background in History of Science and data analysis who tried to check the links/figures/etc to the best of her sleep-deprived abilities. Any mistakes are ultimately the fault of the author, and were made without any intent to misconstrue facts or defraud. Please feel free to submit requests for changes if you notice errors :)
+- `index.html`: the front page, with a card for each issue
+- `busing.html`: the busing cost math, with methods and sources
+- `style.css`: shared styles (the color and font tokens are at the top)
+- `site.js`: the hamburger menu on small screens
+- `assets/lion.svg`: the Laurelhurst lion, traced to a vector so it stays sharp at any size
+
+To add an issue page, copy `busing.html`, change the content inside `<main>`, set `aria-current="page"` on its nav link, and update the nav links in every page.
+
+Every number on the site should link to its source.
