@@ -12,6 +12,7 @@
   --gold-bright: #ffcf70; /* numbers on dark */
   --red: #a8321e;         /* math operators, calls to action */
   --ink: #141413;
+  --ring: #8b8370;        /* expected-score circles */
   --muted: #55503f;
   --on-dark: #ffffff;
   --on-dark-muted: #d9d3c2;
@@ -587,6 +588,13 @@ a.num:hover { color: var(--red); }
 
 .ask { background: var(--paper); border: 3px solid var(--gold); border-radius: 16px; padding: clamp(18px, 3vw, 26px) clamp(18px, 3vw, 36px); }
 .ask p { margin: 0; font: 700 clamp(20px, 2.6vw, 26px)/1.35 var(--display); color: var(--ink); text-wrap: balance; }
+
+/* dumbbell chart (grades 6–8 reading vs. expected) */
+.db-wrap { overflow-x: auto; }
+.db-wrap svg { display: block; }
+.db-row:hover .bgr { fill: #f6ead0 !important; }
+.db-row.me:hover .bgr { fill: var(--blue-soft) !important; }
+.db-key svg { flex: 0 0 auto; }
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--blue-deep); color: var(--on-dark-muted); }

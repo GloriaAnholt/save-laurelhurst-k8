@@ -58,11 +58,12 @@
   <section class="tabs" data-tabs aria-label="Neighborhood measures">
     <div class="tab-bar" role="tablist">
       <button role="tab" id="tab-capture" aria-controls="capture" aria-selected="true">Capture rate</button>
+      <button role="tab" id="tab-allkids" aria-controls="allkids" aria-selected="false" tabindex="-1">All neighborhood kids</button>
       <button role="tab" id="tab-attendance" aria-controls="attendance" aria-selected="false" tabindex="-1">Attendance</button>
     </div>
 
     <div class="tab-panel" role="tabpanel" id="capture" aria-labelledby="tab-capture">
-      <p class="panel-lede">Of the 719 PPS students living in Laurelhurst’s area, <strong>610 (85%)</strong> attend Laurelhurst. PPS’s own decisions shape the numbers elsewhere: after its 2023 boundary changes, only 271 PPS students live in Mt Tabor Middle School’s area, and PPS’s alternative and lottery programs draw 76 of them (28%) away from their neighborhood school.</p>
+      <p class="panel-lede">Of the 719 PPS students living in Laurelhurst’s area, <strong>610 (85%)</strong> attend Laurelhurst. Only 71 (10%) are drawn to PPS’s alternative and lottery programs, compared with 15% across all PPS elementary and K-8 neighborhoods.</p>
       <figure class="chart">
         <figcaption>
           <span class="chart-title">Neighborhood capture rate, every PPS school with an attendance area</span>
@@ -155,10 +156,32 @@
       </figure>
       <ul class="panel-notes">
         <li><strong>Capture rate</strong> is PPS’s measure: the share of PPS students living in a school’s attendance area who attend that school. Pre-K students are not counted.</li>
+        <li><strong>Where the rest go:</strong> of the 719 PPS students in Laurelhurst’s area, 610 attend Laurelhurst, 71 attend PPS alternative programs (the report’s “PPS Alternative” column), 14 attend another neighborhood school, 12 attend a PPS charter, and 12 are in special services programs.</li>
+        <li><strong>Capture rate only counts PPS students.</strong> It shows how many PPS families choose their neighborhood school over other PPS options, like focus, immersion or lottery programs. Families who leave PPS for private school aren’t in it at all. The <a href="#allkids">All neighborhood kids</a> tab counts them too.</li>
         <li>This is the most recent capture-rate report PPS has published. Grades are each school’s 2024-25 configuration.</li>
         <li>Richmond, Winterhaven, Odyssey, da Vinci, MLC, and ACCESS have no attendance area, so they have no capture rate. Jefferson High School (16%) is left out of the chart. Most of its attendance area is shared with Grant, McDaniel, and Roosevelt, so families there can choose either school, which pulls its capture rate far below any other school’s.</li>
       </ul>
     </div>
+    <div class="tab-panel" role="tabpanel" id="allkids" aria-labelledby="tab-allkids">
+      <p class="panel-lede">For the neighborhood as a whole, families choose Laurelhurst K-8 over other PPS options and private schools for about <strong>69%</strong> of K–8 kids. That’s about 8 points more than a neighborhood with its income would be expected to keep.</p>
+      <figure class="chart">
+        <figcaption>
+          <span class="chart-title">Neighborhoods with incomes similar to Laurelhurst’s: PPS’s capture rate vs. share of all neighborhood kids</span>
+          <span class="src">The 13 PPS elementary and K-8 attendance areas with median household incomes of about $90,000–$110,000. Sorted by share of all neighborhood kids. Laurelhurst ranks 9th of the 53 PPS elementary and K-8 neighborhoods on this measure.</span>
+        </figcaption>
+        <ul class="chart-key db-key" aria-hidden="true">
+          <li><svg width="16" height="16"><circle cx="8" cy="8" r="5.5" style="fill:var(--paper);stroke:var(--ring)" stroke-width="2"/></svg>PPS capture rate (PPS students only)</li>
+          <li><svg width="34" height="16"><line x1="9" y1="8" x2="31" y2="8" style="stroke:var(--blue)" stroke-width="3"/><circle cx="8" cy="8" r="6" style="fill:var(--blue)"/></svg>Share of all neighborhood K–8 kids, including private school</li>
+        </ul>
+        <div class="db-wrap"><svg id="ak" role="img" aria-labelledby="ak-t" width="100%"></svg></div>
+      </figure>
+      <ul class="panel-notes">
+        <li><strong>Why two numbers:</strong> PPS’s capture rate leaves out families who choose private school. The second number divides the same neighborhood-school students by every K–8 student living in the area, public or private. About 1 in 5 K–8 kids in Laurelhurst’s neighborhood attends a private school, which is typical for its income.</li>
+        <li><strong>Treat differences of a few points as ties.</strong> The private-school figures come from Census survey estimates with wide margins of error: about ±6 points for Laurelhurst’s area, and up to ±29 for some others.</li>
+        <li>In some higher-income west-side neighborhoods, 27% to 46% of K–8 kids attend private school, so a high PPS capture rate there covers a much smaller share of the neighborhood.</li>
+      </ul>
+    </div>
+
     <div class="tab-panel" role="tabpanel" id="attendance" aria-labelledby="tab-attendance">
       <p class="panel-lede">Laurelhurst students come to school more regularly than students across PPS’s elementary, K-8, and middle schools, by <strong>7 to 10 points</strong> in every large student group, including students in poverty and students with disabilities.</p>
       <figure class="chart">
@@ -266,6 +289,8 @@
       <li><a href="https://www.pps.net/cms/lib/OR01913224/Centricity/Domain/207/School%20Profiles%20-%20October_2024_capture_rate.pdf">PPS, School Profiles: October 2024 capture rate</a>. Neighborhood student counts and capture rates by school. PPS has not published a 2025-26 version; its enrollment-planning page, where one would likely be posted, is password-protected.</li>
       <li><strong>District average (70%)</strong>: PPS’s report totals 29,317 of 41,776 students attending their neighborhood school across elementary, middle, and high schools (71%, 70%, and 69%). The report’s grand total prints 68% because it also counts 1,599 students with no assigned neighborhood, who by definition can’t attend one; we leave those out.</li>
       <li><a href="https://www.oregon.gov/ode/reports-and-data/students/Documents/regularattenders_report_2425.xlsx">Oregon Department of Education, Regular Attenders report, 2024-25</a>. A regular attender attended more than 90% of the days they were enrolled, counted through the first school day in May. Students enrolled fewer than 75 days are not counted. The PPS K-8 comparison adds the regular-attender counts for every PPS-run elementary, K-8, and middle school and divides by their total students in each group; “Grades 6–8” uses the grade 6, 7, and 8 rows.</li>
+      <li><strong>All neighborhood kids:</strong> private-school counts come from the Census Bureau’s American Community Survey, 2020–2024 five-year estimates, <a href="https://data.census.gov/table?q=B14002">table B14002</a> (school enrollment by level and type), for kindergarten through 8th grade in every Multnomah County census tract. Each tract’s students are divided among PPS attendance areas by land area. The share of all neighborhood kids is PPS’s capture rate multiplied by the area’s public-school share. Charter students count as public; homeschooled students aren’t counted. The census years (2020–24) differ from the capture-rate year (fall 2024).</li>
+      <li><strong>Income and the “expected” figure:</strong> median household income for each attendance area is a land-area-weighted average of Census tracts (American Community Survey 2015–2019). Across the 53 elementary and K-8 areas, a straight-line fit of the share of all neighborhood kids against income predicts about 61% for an area at Laurelhurst’s income (about $100,500).</li>
       <li>Colors split the 74 schools into thirds (25, 25, and 24 schools) by capture rate. PPS has not published a capture-rate goal, so the thirds show where each school ranks rather than whether it meets a target.</li>
     </ul>
   </section>
@@ -281,5 +306,45 @@
 </footer>
 
 <script src="site.js"></script>
+<script>
+(function () {
+  var D = [["Hayhurst",78,75],["Beverly Cleary",88,71],["Capitol Hill",79,69],["Laurelhurst",85,69,1],["Skyline",88,66],["Lewis",79,66],["Rieke",81,65],["Maplewood",81,64],["Markham",72,59],["Sabin",69,54],["Vernon",68,50],["Irvington",69,50],["Chapman",71,41]].map(function (r) { return { n: r[0], c: r[1], a: r[2], me: r[3] }; });
+  var NS = "http://www.w3.org/2000/svg", STYLE = { fill: 1, stroke: 1, "font-family": 1 };
+  function el(t, a, p) { var e = document.createElementNS(NS, t); for (var k in a) { if (STYLE[k]) e.style.setProperty(k, a[k]); else e.setAttribute(k, a[k]); } if (p) p.appendChild(e); return e; }
+  var svg = document.getElementById("ak"), lastW = 0;
+  function draw() {
+    var W = svg.parentNode.clientWidth; if (!W || W === lastW) return; lastW = W; W = Math.max(300, W);
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var narrow = W < 560, x0 = 30, x1 = 100, T = 30;
+    var RH = narrow ? 50 : 34, H = T + D.length * RH + 6;
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H); svg.setAttribute("height", H);
+    el("title", { id: "ak-t" }, svg).textContent = "PPS capture rate and share of all neighborhood K-8 kids attending the neighborhood school, 13 similar-income PPS neighborhoods";
+    var L = narrow ? 10 : 150, R = narrow ? 10 : 140;
+    function sx(v) { return L + (v - x0) / (x1 - x0) * (W - L - R); }
+    for (var v = x0; v <= x1; v += narrow ? 20 : 10) {
+      if (narrow && v === 30) continue;
+      el("line", { x1: sx(v), x2: sx(v), y1: T - 6, y2: H - 4, stroke: "var(--gold-soft)", "stroke-width": 1 }, svg);
+      el("text", { x: sx(v), y: T - 12, "text-anchor": narrow && v === 90 ? "end" : "middle", "font-size": 12.5, fill: "var(--muted)", "font-family": "var(--body)" }, svg).textContent = v + "%";
+    }
+    D.forEach(function (d, i) {
+      var top = T + i * RH, g = el("g", { "class": "db-row" + (d.me ? " me" : "") }, svg);
+      el("rect", { "class": "bgr", x: 0, y: top + 1, width: W, height: RH - 2, rx: 6, fill: d.me ? "var(--blue-soft)" : "transparent" }, g);
+      var ly = narrow ? top + 18 : top + RH / 2 + 5, dy = narrow ? top + 36 : top + RH / 2;
+      var t = el("text", { x: narrow ? 6 : L - 14, y: ly, "text-anchor": narrow ? "start" : "end", "font-size": narrow ? 14 : 15.5, "font-weight": d.me ? 700 : 400, fill: "var(--ink)", "font-family": "var(--body)" }, g);
+      t.textContent = d.n;
+      var vt = el("text", { x: W - 6, y: ly, "text-anchor": "end", "font-size": narrow ? 14 : 15, "font-family": "var(--label)", "font-weight": d.me ? 800 : 700, fill: "var(--ink)" }, g);
+      vt.textContent = d.a + "% ";
+      var s2 = el("tspan", { fill: "var(--muted)", "font-weight": 600 }, vt); s2.textContent = "· PPS " + d.c + "%";
+      el("line", { x1: sx(d.a), x2: sx(d.c), y1: dy, y2: dy, stroke: "var(--blue)", "stroke-width": 3, "stroke-linecap": "round", opacity: 0.55 }, g);
+      el("circle", { cx: sx(d.c), cy: dy, r: 5, fill: "var(--paper)", stroke: "var(--ring)", "stroke-width": 2 }, g);
+      el("circle", { cx: sx(d.a), cy: dy, r: d.me ? 7.5 : 6, fill: "var(--blue)", stroke: "var(--paper)", "stroke-width": 2 }, g);
+      el("title", {}, g).textContent = d.n + ": PPS capture rate " + d.c + "%; about " + d.a + "% of all neighborhood K-8 kids, including private school.";
+    });
+  }
+  if (window.ResizeObserver) new ResizeObserver(draw).observe(svg.parentNode);
+  window.addEventListener("resize", draw); draw();
+})();
+</script>
+
 </body>
 </html>
