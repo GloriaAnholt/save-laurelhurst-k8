@@ -1,4 +1,4 @@
-# Save Laurelhurst K-8
+# Save Strong K-8s
 
 A fact-based website from a Laurelhurst parent on the Portland Public Schools rightsizing proposal to convert Laurelhurst from a K-8 to a K-5.
 
