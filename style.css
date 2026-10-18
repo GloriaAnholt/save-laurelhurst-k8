@@ -212,7 +212,8 @@ a:hover { color: var(--red); }
   line-height: 1.08;
   letter-spacing: -0.01em;
   color: var(--blue);
-  text-wrap: balance;
+  text-wrap: wrap;
+  max-width: 90%;
 }
 .src { font-size: 15px; line-height: 1.4; color: var(--muted); }
 a.src:hover { color: var(--red); }
@@ -653,3 +654,4 @@ a.num:hover { color: var(--red); }
 [id^="fn"], [id^="ref"] { scroll-margin-top: 80px; }
 /* body text spans the full content width, matching the charts, tables, and cards */
 .intro p, .lede p:not(.subhead), .panel-lede, .panel-notes, .tiers-lede, .points-lede, .points ul, .methods p, .methods li { max-width: none; }
+.article h1.h1-wide { text-wrap: wrap; }
