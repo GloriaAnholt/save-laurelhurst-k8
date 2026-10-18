@@ -1,6 +1,6 @@
 # Save Strong K-8s
 
-A fact-based website from a Laurelhurst parent on the Portland Public Schools rightsizing proposal to convert Laurelhurst from a K-8 to a K-5.
+A fact-based website from a Laurelhurst parent on the Portland Public Schools rightsizing proposals, which would convert seven K-8s into K-5s. Laurelhurst is the worked example; I don’t speak for other schools’ communities.
 
 Plain static HTML and CSS served by GitHub Pages. There is no build step.
 

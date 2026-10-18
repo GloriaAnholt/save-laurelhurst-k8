@@ -610,3 +610,46 @@ a.num:hover { color: var(--red); }
   body { background: #fff; }
   .card, .factcheck { break-inside: avoid; }
 }
+
+/* K-8 plan table (home page) */
+.k8-plan { margin-top: 8px; margin-bottom: 40px; }
+.k8-plan h2 { font: 900 clamp(24px, 3.2vw, 32px)/1.2 var(--display); color: var(--blue-deep); margin: 0 0 10px; }
+.k8-table { min-width: 0; }
+.k8-table th.plan { text-align: left; }
+.k8-table td.plan { text-align: left; font: 600 17px/1.3 var(--body); }
+.k8-table tr.meets td:nth-child(3) { color: var(--blue-deep); }
+.k8-table tr.kept th, .k8-table tr.kept td { color: var(--muted); }
+.k8-table tr.kept td.plan { font-weight: 700; color: var(--ink); }
+.k8-table tbody tr:nth-child(3) th, .k8-table tbody tr:nth-child(3) td { border-bottom: 3px solid var(--ink); }
+.k8-plan .footnote { margin-top: 12px; }
+@media (max-width: 480px) {
+  .k8-table th, .k8-table td { padding: 9px 7px; }
+  .k8-table thead th { font-size: 12px; letter-spacing: 0.03em; }
+  .k8-table thead small { font-size: 11px; }
+  .k8-table tbody th, .k8-table td.plan { font-size: 14px; }
+  .k8-table td { font-size: 17px; }
+}
+.k8-plan .table-scroll { margin-top: 16px; }
+.nw { white-space: nowrap; }
+.lc { text-transform: lowercase; }
+.k8-table td.k5.below { color: var(--red); }
+.k8-table td.k5.na { color: var(--muted); font-weight: 600; }
+.k8-table td sup { font-size: 0.6em; margin-left: 1px; }
+.k8-table th sup { font-size: 0.65em; margin-left: 2px; }
+.k8-plan .footnote + .footnote { border-top: 0; margin-top: 8px; padding-top: 0; }
+.footnote sup { font-size: 0.75em; }
+/* page notes at the bottom of the home page */
+.page-notes { padding-top: 28px; padding-bottom: 8px; }
+.page-notes .footnote { border-top: 0; padding-top: 0; margin: 0 0 8px; }
+.page-notes .footnote:first-child { border-top: 1px solid var(--gold-soft); padding-top: 12px; }
+.intro sup { font-size: 0.7em; }
+/* footnote links */
+.fn-ref a { text-decoration: none; color: var(--blue); font-weight: 700; padding: 0 1px; }
+.fn-ref a:hover { text-decoration: underline; }
+.page-notes .fn-back { display: inline-block; min-width: 1.4em; font-weight: 800; color: var(--blue); text-decoration: none; }
+.page-notes .fn-back:hover, .page-notes .fn-up:hover { text-decoration: underline; }
+.page-notes .fn-up { color: var(--blue); text-decoration: none; font-weight: 700; }
+.page-notes .footnote:target { background: var(--gold-soft); border-radius: 4px; }
+[id^="fn"], [id^="ref"] { scroll-margin-top: 80px; }
+/* body text spans the full content width, matching the charts, tables, and cards */
+.intro p, .lede p:not(.subhead), .panel-lede, .panel-notes, .tiers-lede, .points-lede, .points ul, .methods p, .methods li { max-width: none; }
