@@ -674,3 +674,7 @@ a.num:hover { color: var(--red); }
 .tp .pair-row.lh .bar-val { font-weight: 400; font-size: 14px; color: var(--muted); }
 .tp .pair-row.top .bar-val { font-weight: 800; font-size: 16px; color: var(--ink); }
 .tp .pair-row.top .pair-who { color: var(--ink); font-weight: 800; }
+/* poverty charts: the four converted K-8s from the student group tab */
+.sc-dot.bc { fill: var(--bc); } .sc-dot.ss { fill: var(--ss); } .sc-dot.vn { fill: var(--vn); }
+.sc-dot.vn[r="8"] { stroke: var(--ink); stroke-width: 2; }
+.sc-gap.vn { stroke: var(--vn); }
