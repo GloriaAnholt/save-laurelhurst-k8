@@ -44,3 +44,16 @@
     show(fromHash || tabs[0]);
   });
 })();
+
+// Start each page at the top, even if the browser remembers an old scroll
+// position. Footnote links (#fn…, #ref…) still jump to their target.
+(function () {
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+  function toTop() {
+    var h = location.hash;
+    var keep = h && /^#(fn|ref)/.test(h) && document.querySelector(h);
+    if (!keep) window.scrollTo(0, 0);
+  }
+  window.addEventListener('pageshow', function () { toTop(); setTimeout(toTop, 0); });
+  window.addEventListener('load', function () { setTimeout(toTop, 0); });
+})();
