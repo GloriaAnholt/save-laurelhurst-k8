@@ -655,3 +655,22 @@ a.num:hover { color: var(--red); }
 /* body text spans the full content width, matching the charts, tables, and cards */
 .intro p, .lede p:not(.subhead), .panel-lede, .panel-notes, .tiers-lede, .points-lede, .points ul, .methods p, .methods li { max-width: none; }
 .article h1.h1-wide { text-wrap: wrap; }
+/* home page: Laurelhurst-specific cards get a blue frame */
+.card.card-lh { border-color: var(--blue-soft); border-top-color: var(--blue); }
+.card.card-lh.live:hover { border-color: var(--blue); }
+/* test scores by group: other converted K-8s */
+:root { --bc: #3d7a3f; --ss: #7b5ea7; --vn: #b0457d; }
+.sw.bc { background: var(--bc); } .sw.ss { background: var(--ss); } .sw.vn { background: var(--vn); }
+.pair-row.bc .bar-fill { background: var(--bc); }
+.pair-row.ss .bar-fill { background: var(--ss); }
+.pair-row.vn .bar-fill { background: var(--vn); }
+.tp .pair-row { grid-template-columns: 124px minmax(0, 1fr); column-gap: 12px; }
+.tp-head .tp-cols .tp-subj { padding-left: 136px; }
+.pair-row.supp .bar-note { font-size: 13px; font-style: italic; color: var(--muted); }
+.tp-col { gap: 3px; }
+.pair-row.supp .bar-area { display: flex; align-items: center; min-height: 0; height: 24px; }
+.pair-row.supp .bar-note { line-height: 1; }
+/* test scores by group: bold the highest score in each column, whichever school it is */
+.tp .pair-row.lh .bar-val { font-weight: 400; font-size: 14px; color: var(--muted); }
+.tp .pair-row.top .bar-val { font-weight: 800; font-size: 16px; color: var(--ink); }
+.tp .pair-row.top .pair-who { color: var(--ink); font-weight: 800; }
