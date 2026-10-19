@@ -5,7 +5,7 @@ A fact-based website from a Laurelhurst parent on the Portland Public Schools ri
 Plain static HTML and CSS served by GitHub Pages. There is no build step.
 
 - `index.html`: the front page, with a card for each issue
-- `cost.html`, `busing.html`, `scores.html`, `research.html`, `neighborhood.html`, `population.html` (Enrollment), `boundary.html`: issue pages, each with methods and sources
+- `cost.html`, `busing.html`, `scores.html`, `research.html`, `population.html` (Enrollment), `neighborhood.html`, `boundary.html`: issue pages, each with methods and sources
 - `style.css`: shared styles (the color and font tokens are at the top)
 - `site.js`: the hamburger menu on small screens, and tabs
 - `assets/lion.svg`: the Laurelhurst lion, traced to a vector so it stays sharp at any size
