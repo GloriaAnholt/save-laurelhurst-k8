@@ -29,92 +29,115 @@
 </header>
 
 <nav class="nav" aria-label="Key issues">
-  <div class="wrap">
+  <div class="nav-bar wrap">
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
       <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
       Key issues
     </button>
-    <ul id="nav-links">
-      <li><a href="plan.html">The plan</a></li>
-      <li><a href="cost.html">Real cost</a></li>
-      <li><a href="busing.html">Busing cost</a></li>
-      <li><a href="scores.html">Test scores</a></li>
-      <li><a href="research.html">K-8 research</a></li>
-      <li><a href="case_studies.html">Case studies</a></li>
-      <li><a href="enrollment.html">Enrollment</a></li>
-      <li><a href="neighborhood.html">Neighborhood</a></li>
-      <li><a href="boundary.html">Boundaries</a></li>
-      <li class="nav-extra nav-extra-first"><a href="#programs">Programs</a></li>
-      <li class="nav-extra"><a href="#voices">In their own words</a></li>
-      <li class="nav-extra"><a href="#sign">Add your name</a></li>
-    </ul>
+  </div>
+  <div class="nav-menu" id="nav-links">
+    <div class="nav-row nav-big">
+      <div class="wrap">
+        <span class="nav-label" id="nav-big-l">The big picture</span>
+        <ul aria-labelledby="nav-big-l">
+          <li><a href="plan.html">Conversions</a></li>
+          <li><a href="cost.html">Cost per kid</a></li>
+          <li><a href="hidden.html">Hidden costs</a></li>
+          <li><a href="scores.html">Test scores</a></li>
+          <li><a href="research.html">K-8 research</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav-row nav-details">
+      <div class="wrap">
+        <span class="nav-label" id="nav-det-l">The details</span>
+        <ul aria-labelledby="nav-det-l">
+          <li><a href="case_studies.html">Case studies</a></li>
+          <li><a href="enrollment.html">Enrollment</a></li>
+          <li><a href="neighborhood.html">Neighborhood</a></li>
+          <li><a href="boundary.html">Boundaries</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav-row nav-more">
+      <div class="wrap">
+        <ul>
+          <li class="nav-extra nav-extra-first"><a href="#programs">Programs</a></li>
+          <li class="nav-extra"><a href="#voices">In their own words</a></li>
+          <li class="nav-extra"><a href="#sign">Add your name</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </nav>
 
 <main>
   <section class="intro wrap">
     <p>Portland Public Schools’ Rightsizing plans would turn seven K-8 schools into K-5s and send their 6th through 8th graders to middle schools. PPS says stand-alone middle schools are more cost-effective and more equitable, but the numbers say otherwise.</p>
-    <p>I’m a parent of a Laurelhurst student, and this website is my<sup class="fn-ref"><a href="#fn1" id="ref1">1</a></sup> attempt to make sense of the data. I can’t speak for other schools’ families, so I use my own school as the worked example: I went through PPS’s own budgets, state test data, and bus records to check the case for the change. Every number below links to its source.</p>
+    <p>I’m a parent of a Laurelhurst student, and this website is my<sup class="fn-ref"><a href="#fn1" id="ref1">1</a></sup> attempt to make sense of the data. I can’t speak for other schools’ families, so I use my own school as the worked example. I went through PPS’s own budgets and reports, state test data, census data, newspaper archives, and more to check the case for change.</p>
+    <div class="callout intro-ask">
+      <p>The answer is clear: Tell the PPS Board to vote <strong>NO</strong> on Rightsizing. Demand a better plan with clear implementation details.</p>
+    </div>
   </section>
 
   <ul class="cards wrap">
-    <li class="card live" id="plan">
+    <li class="card live card-big" id="plan">
       <h2><a href="plan.html">Which <span class="nw">K-8s</span> does PPS keep?</a></h2>
       <div class="stat">6 of 7</div>
       <p>K-8s PPS wants to convert would start out below their own enrollment threshold recommendations for a K-5. The four they keep are already below.</p>
       <span class="more">See the plan →</span>
     </li>
 
-    <li class="card live" id="cost">
+    <li class="card live card-big" id="cost">
       <h2><a href="cost.html">Do <span class="nw">K-8</span> middle grades really cost more?</a></h2>
       <div class="stat">$7,226</div>
       <p>per middle schooler in teacher cost at Sunnyside, by PPS’s own math. That’s below PPS’s $8,750 K-8 average. The extra cost sits in a few small programs.</p>
       <span class="more">See the math →</span>
     </li>
 
-    <li class="card live" id="busing">
-      <h2><a href="busing.html">Does converting a <span class="nw">K-8</span> add busing costs?</a></h2>
+    <li class="card live card-big" id="busing">
+      <h2><a href="hidden.html">Does converting a <span class="nw">K-8</span> add new costs?</a></h2>
       <div class="stat">$38K–$77K</div>
       <p>a year in new bus routes to take Laurelhurst’s middle schoolers to Mt Tabor, after Oregon pays its share. PPS has no general bus routes to Laurelhurst today.</p>
       <span class="more">See the math →</span>
     </li>
 
-    <li class="card live" id="scores">
+    <li class="card live card-big" id="scores">
       <h2><a href="scores.html">How do <span class="nw">K-8</span> middle graders do on state tests?</a></h2>
       <div class="stat">78%</div>
       <p>of Laurelhurst and Beverly Cleary 6th–8th graders met the state reading standard in 2024-25, tied for the highest of any PPS neighborhood school. All of PPS: 56%.</p>
       <span class="more">See the scores →</span>
     </li>
 
-    <li class="card live" id="research">
+    <li class="card live card-big" id="research">
       <h2><a href="research.html">What does research say about <span class="nw">K-8</span> schools?</a></h2>
       <div class="stat">127% larger</div>
       <p>math losses for students who were already behind. In a peer-reviewed Harvard study, moving to middle school in 6th grade cost them more than twice as much as their classmates.</p>
       <span class="more">See the research →</span>
     </li>
 
-    <li class="card live" id="case-studies">
+    <li class="card live card-detail" id="case-studies">
       <h2><a href="case_studies.html">What happened to the <span class="nw">K-8s</span> PPS already converted?</a></h2>
       <div class="stat">5 of 14</div>
       <p>K-8s that PPS has converted to K-5s since 2016 are on its closure list in both plans.</p>
       <span class="more">See the case studies →</span>
     </li>
 
-    <li class="card live card-lh" id="enrollment">
+    <li class="card live card-detail card-lh" id="enrollment">
       <h2><a href="enrollment.html">Can Laurelhurst fill its middle grades?</a></h2>
       <div class="stat">16%</div>
       <p>more school-age kids lived in Laurelhurst in 2020 than in 2000, rising from 795 to 922, even as the neighborhood’s older population grew.</p>
       <span class="more">See the numbers →</span>
     </li>
 
-    <li class="card live card-lh" id="neighborhood">
+    <li class="card live card-detail card-lh" id="neighborhood">
       <h2><a href="neighborhood.html">Do neighborhood families choose Laurelhurst?</a></h2>
       <div class="stat">85%</div>
       <p>of PPS students living in Laurelhurst’s area attend Laurelhurst, 14th of 74 PPS schools. The district average is 70%.</p>
       <span class="more">See the numbers →</span>
     </li>
 
-    <li class="card live card-lh" id="boundary">
+    <li class="card live card-detail card-lh" id="boundary">
       <h2><a href="boundary.html">Does moving Laurelhurst’s middle grades fix the problem?</a></h2>
       <div class="stat">~350</div>
       <p>students would be left at Laurelhurst as a K–5, below PPS’s own 360-student threshold. The plan moves a shortfall instead of fixing it.</p>
