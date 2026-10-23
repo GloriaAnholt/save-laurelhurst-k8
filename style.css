@@ -117,11 +117,11 @@ a:hover { color: var(--red); }
 .nav a {
   display: flex;
   align-items: center;
-  padding: 14px clamp(10px, 1.6vw, 18px);
+  padding: 14px 6px;
   color: var(--on-dark);
   text-decoration: none;
-  font: 700 14px/1.1 var(--label);
-  letter-spacing: 0.08em;
+  font: 700 13px/1.1 var(--label);
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
@@ -130,7 +130,7 @@ a:hover { color: var(--red); }
 .nav a[aria-current="page"]:hover { box-shadow: none; }
 
 .nav li.nav-extra { display: none; }
-@media (max-width: 860px) {
+@media (max-width: 899px) {
   .nav .wrap { flex-direction: column; }
   .nav-toggle { display: inline-flex; }
   .nav ul { display: none; flex-direction: column; padding-bottom: 8px; }
@@ -139,6 +139,8 @@ a:hover { color: var(--red); }
   .nav a { width: 100%; padding: 14px 8px; font-size: 15px; }
 }
 @media (prefers-reduced-motion: reduce) { .nav a { transition: none; } }
+/* ten nav items: tighten between the hamburger breakpoint and full width */
+@media (min-width: 900px) and (max-width: 1079px) { .nav a { font-size: 11.5px; padding: 14px 3px; letter-spacing: 0; } }
 
 /* ---------- Front page ---------- */
 .intro { padding-block: clamp(28px, 5vw, 48px) 8px; }
@@ -452,7 +454,7 @@ a.num:hover { color: var(--red); }
 .compare td { font: 800 20px/1.1 var(--label); }
 .compare tr.lh th, .compare tr.lh td { background: var(--blue-soft); color: var(--ink); }
 .compare tr.lh th { font-weight: 800; }
-.compare tfoot th, .compare tfoot td { border-bottom: 0; border-top: 3px solid var(--ink); color: var(--red); }
+.compare tfoot th, .compare tfoot td { border-bottom: 0; border-top: 3px solid var(--gold); color: var(--red); }
 .compare tfoot td { font-size: 22px; font-weight: 900; }
 
 /* paired bars (Laurelhurst vs. a comparison) */
@@ -553,7 +555,7 @@ a.num:hover { color: var(--red); }
 .sc-fit { stroke: var(--ink); stroke-width: 2; stroke-dasharray: 6 5; }
 .sc-fitlab { fill: var(--ink); font: 700 12px var(--body); }
 .sc-dot { stroke: var(--paper); stroke-width: 1.5; }
-.sc-dot.k8 { fill: var(--t2); } .sc-dot.ms { fill: var(--t3); } .sc-dot.lh { fill: var(--gold); stroke: var(--ink); stroke-width: 2; }
+.sc-dot.k8 { fill: var(--t2); } .sc-dot.ms { fill: var(--t3); } .sc-dot.lhs { fill: var(--gold); } .sc-dot.lh { fill: var(--gold); stroke: var(--ink); stroke-width: 2; }
 .sc-gap { stroke: var(--gold); stroke-width: 3; }
 .sc-lhlab { fill: var(--ink); font: 800 14px var(--label); }
 .sc-lhsub { fill: var(--muted); font: 600 11px var(--body); }
@@ -584,7 +586,7 @@ a.num:hover { color: var(--red); }
 .why-card .more { color: var(--gold-bright); }
 
 /* positives in the phone menu */
-@media (max-width: 860px) {
+@media (max-width: 899px) {
   .nav.open li.nav-extra { display: flex; }
   .nav li.nav-extra-first { border-top: 5px solid var(--gold); margin-top: 8px; }
   .nav-extra a { color: var(--gold-bright); }
@@ -623,7 +625,9 @@ a.num:hover { color: var(--red); }
 .k8-table tr.meets td:nth-child(3) { color: var(--blue-deep); }
 .k8-table tr.kept th, .k8-table tr.kept td { color: var(--muted); }
 .k8-table tr.kept td.plan { font-weight: 700; color: var(--ink); }
-.k8-table tbody tr:nth-child(3) th, .k8-table tbody tr:nth-child(3) td { border-bottom: 3px solid var(--ink); }
+.k8-table tbody tr:nth-child(3) th, .k8-table tbody tr:nth-child(3) td,
+.k8-table tbody tr:nth-child(7) th, .k8-table tbody tr:nth-child(7) td { border-bottom: 3px solid var(--gold); }
+.k8-table tr.kept td:nth-child(3) { color: var(--red); }
 .k8-plan .footnote { margin-top: 12px; }
 @media (max-width: 480px) {
   .k8-table th, .k8-table td { padding: 9px 7px; }
@@ -755,3 +759,171 @@ a.num:hover { color: var(--red); }
 .mini-math tr.total td { border-top: 3px solid var(--gold); padding-top: 12px; vertical-align: top; }
 .mini-math tr.total .v { font-size: 34px; color: var(--blue); }
 .mini-math tr.total .l { color: var(--ink); font-size: 20px; font-weight: 600; padding-top: 14px; }
+
+/* tl;dr page */
+.tldr { display: flex; flex-direction: column; gap: clamp(22px, 3vw, 30px); }
+.tldr section { display: flex; flex-direction: column; gap: 10px; padding-top: 18px; border-top: 2px solid var(--gold-soft); }
+.tldr .eyebrow { text-decoration: none; font-size: 14px; }
+.tldr a.eyebrow:hover { color: var(--red); }
+.tldr p { margin: 0; max-width: 42em; font-size: clamp(18px, 2vw, 20px); line-height: 1.55; }
+
+/* case studies: history box */
+.study.history { max-width: 52em; }
+.study.history p { margin: 0; font-size: 18px; line-height: 1.55; }
+
+/* case studies: timeline (built on the busing range line) */
+.timeline { display: flex; flex-direction: column; gap: 4px; padding-top: 4px; }
+.tl-above, .tl-below { position: relative; height: 92px; margin: 0 3px; }
+.tl-ev { position: absolute; font: 700 15px/1.2 var(--body); white-space: nowrap; padding-left: 8px; border-left: 2px solid currentColor; }
+.tl-above .tl-ev { bottom: 0; padding-bottom: calc(var(--row) * 22px - 18px); }
+.tl-below .tl-ev { top: 0; padding-top: calc(var(--row) * 22px - 18px); }
+.tl-ev.right { padding-left: 0; padding-right: 8px; border-left: 0; border-right: 2px dashed currentColor; transform: translateX(calc(-100% + 2px)); }
+.tl-ev.k8 { color: var(--blue); }
+.tl-ev.k5, .tl-ev.prop { color: var(--red); }
+.c-k8 { background: var(--blue); }
+.c-k5 { background: var(--red); }
+.c-prop { background: var(--paper); border: 2px dashed var(--red); box-sizing: border-box; }
+.sw.tl-k8 { background: var(--blue); }
+.sw.tl-k5 { background: var(--red); }
+.sw.tl-prop { background: var(--paper); border: 2px dashed var(--red); box-sizing: border-box; }
+@media (max-width: 700px) {
+  .tl-above, .tl-below { height: auto; display: flex; flex-direction: column; gap: 6px; }
+  .tl-ev { position: static; transform: none !important; padding: 0 0 0 8px !important; border-right: 0 !important; border-left: 2px solid currentColor !important; white-space: normal; font-size: 14px; }
+}
+
+.eras { display: flex; flex-direction: column; gap: 16px; }
+.eras .study.history { max-width: none; }
+
+/* draft: claims still being verified */
+.verify { background: color-mix(in srgb, var(--gold) 22%, transparent); border-bottom: 2px dashed var(--gold); }
+.verify-note { font-style: italic; }
+
+/* case studies: up/down bar chart of K-8 changes */
+.dbar { display: flex; flex-direction: column; gap: 8px; }
+.dbar-plot, .dbar-labels { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+.dbar-up, .dbar-down { height: 158px; display: flex; flex-direction: column; align-items: center; }
+.dbar-up { justify-content: flex-end; }
+.dbar-down { justify-content: flex-start; }
+.dbar-plot { position: relative; }
+.dbar-plot::after { content: ""; position: absolute; left: 0; right: 0; top: 158px; border-top: 2px solid var(--ink); }
+.dbar-b { width: 70%; max-width: 64px; border-radius: 4px 4px 0 0; }
+.dbar-down .dbar-b { border-radius: 0 0 4px 4px; }
+.dbar-b.k8 { background: var(--blue); }
+.dbar-b.k5 { background: var(--red); }
+.dbar-b.prop { background: repeating-linear-gradient(45deg, color-mix(in srgb, var(--red) 35%, transparent) 0 5px, transparent 5px 10px); border: 2px dashed var(--red); border-top: 0; box-sizing: border-box; }
+.dbar-v { font: 800 18px/1.3 var(--label); font-variant-numeric: tabular-nums; }
+.dbar-v.k8 { color: var(--blue); }
+.dbar-v.k5, .dbar-v.prop { color: var(--red); }
+.dbar-labels > div { text-align: center; font-size: 15px; line-height: 1.25; }
+.dbar-labels strong { display: block; font-family: var(--label); }
+.dbar-labels span { display: block; color: var(--muted); font-size: 13px; }
+.sw.tl-prop { background: repeating-linear-gradient(45deg, color-mix(in srgb, var(--red) 35%, transparent) 0 3px, transparent 3px 6px); }
+@media (max-width: 560px) {
+  .dbar-plot, .dbar-labels { gap: 4px; }
+  .dbar-v { font-size: 15px; }
+  .dbar-labels > div { font-size: 13px; }
+  .dbar-labels span { font-size: 11px; }
+}
+
+/* case studies: school lifelines */
+.lifelines { display: flex; flex-direction: column; gap: 10px; }
+.ll-row { display: grid; grid-template-columns: 11em minmax(0, 1fr); align-items: center; gap: 12px; }
+.ll-name { font: 800 15px/1.2 var(--label); text-align: right; }
+.ll-track { position: relative; height: 34px; }
+.ll-seg { position: absolute; top: 0; bottom: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; border-left: 2px solid var(--paper); box-sizing: border-box; }
+.ll-seg span { font: 700 13px/1.1 var(--label); color: #fff; white-space: nowrap; padding: 0 6px; overflow: hidden; text-overflow: ellipsis; }
+.ll-seg.k8 { background: var(--blue); }
+.ll-seg.k5 { background: var(--red); }
+.ll-seg.ms { background: var(--gold); }
+.ll-seg.ms span { color: var(--ink); }
+.ll-seg.prop { background: repeating-linear-gradient(45deg, var(--red) 0 4px, color-mix(in srgb, var(--red) 25%, var(--paper)) 4px 8px); }
+.ll-seg.close { background: repeating-linear-gradient(45deg, #6f6f6f 0 4px, #d8d8d8 4px 8px); }
+.ll-axis .ll-track { height: 20px; border-top: 2px solid var(--ink); }
+.ll-axis .ll-track span { position: absolute; top: 4px; transform: translateX(-50%); font-size: 13px; color: var(--muted); }
+.sw.ll-k8 { background: var(--blue); }
+.sw.ll-k5 { background: var(--red); }
+.sw.ll-ms { background: var(--gold); }
+.sw.ll-prop { background: repeating-linear-gradient(45deg, var(--red) 0 3px, color-mix(in srgb, var(--red) 25%, var(--paper)) 3px 6px); }
+.sw.ll-close { background: repeating-linear-gradient(45deg, #6f6f6f 0 3px, #d8d8d8 3px 6px); }
+@media (max-width: 640px) {
+  .ll-row { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .ll-name { text-align: left; font-size: 14px; }
+  .ll-axis .ll-name { display: none; }
+  .ll-track { height: 26px; }
+  .ll-seg span { font-size: 11px; padding: 0 3px; }
+  .ll-axis .ll-track span { font-size: 11px; }
+}
+
+/* case studies: school-vs-school comparison table */
+.sv-table { min-width: 0; margin: 4px 0 8px; }
+.sv-table thead th small { margin-top: 4px; }
+.sv-table td small { display: block; margin-top: 4px; font: 600 14px/1.2 var(--body); color: var(--muted); }
+.sv-table td.up { color: var(--blue); }
+.sv-table td.down { color: var(--red); }
+@media (max-width: 560px) {
+  .sv-table th, .sv-table td { padding: 9px 8px; }
+  .sv-table thead th { font-size: 12px; letter-spacing: 0.03em; }
+  .sv-table tbody th { font-size: 14px; }
+  .sv-table td { font-size: 17px; }
+}
+.sv-table thead th:first-child, .sv-table tbody th { width: 34%; }
+.sv-table th:last-child, .sv-table td:last-child { padding-right: 28px; }
+@media (max-width: 560px) { .sv-table th:last-child, .sv-table td:last-child { padding-right: 14px; } }
+
+/* case studies: Sabin vs. Vernon enrollment lines (orange and green from the Enrollment long-term chart) */
+:root { --sab: #D85A30; --vng: #5DCAA5; --vng-text: #2A8466; }
+.encl-thr { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 8 5; opacity: 0.7; }
+.encl-thlab { fill: var(--ink); font: 700 14px var(--label); letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.8; }
+.encl-mlab tspan.sab { fill: var(--sab); } .encl-mlab tspan.vn { fill: var(--vng-text); }
+.encl-wrap { margin-top: 4px; }
+.encl { width: 100%; height: auto; display: block; overflow: visible; }
+.encl-grid { stroke: var(--gold-soft); stroke-width: 1; }
+/* axis labels match the Enrollment charts (.sc-tick at a 600-wide viewBox; these are 680 wide) */
+.encl-ax { fill: var(--muted); font: 600 12.5px var(--body); font-variant-numeric: tabular-nums; }
+.encl-axis { stroke: var(--muted); stroke-width: 1.5; }
+.encl-mark { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 3 4; opacity: 0.5; }
+.encl-mlab { fill: var(--muted); font: 700 13px var(--label); letter-spacing: 0.04em; text-transform: uppercase; }
+.encl-line { fill: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.encl-line.sab { stroke: var(--sab); }
+.encl-line.vn { stroke: var(--vng); }
+.encl-line.proj { stroke-dasharray: 9 7; }
+.encl-line.ghost { opacity: 0.4; }
+.encl-pt.sab { fill: var(--sab); } .encl-pt.vn { fill: var(--vng); }
+.encl-pt.ghost { opacity: 0.45; }
+.encl-val { font: 900 20px var(--label); font-variant-numeric: tabular-nums; }
+.encl-val.sab { fill: var(--sab); } .encl-val.vn { fill: var(--vng-text); }
+.encl-val.ghost { opacity: 0.6; }
+.encl-brk { stroke: var(--sab); stroke-width: 1.5; }
+.encl-call { fill: var(--sab); font: 900 26px var(--label); }
+.encl-callsub { fill: var(--ink); font: 600 15px var(--body); }
+.sw.ln { width: 26px; height: 0; border-radius: 0; border-top: 4px solid; background: none; }
+.sw.ln.sab { border-top-color: var(--sab); } .sw.ln.vn { border-top-color: var(--vng); }
+.sw.ln.proj { border-top-style: dashed; }
+.sw.ln.ghost { opacity: 0.4; }
+@media (max-width: 600px) { .encl-wrap { overflow-x: auto; } .encl { min-width: 580px; } }
+.callout a { color: var(--on-dark); text-decoration-color: var(--gold-bright); text-decoration-thickness: 2px; }
+.callout a:hover { color: var(--gold-bright); }
+.map-img { display: block; }
+.map-img img { display: block; width: 100%; height: auto; border-radius: 8px; }
+/* case studies: K-8s vs. middle schools line chart */
+.encl-line.types-k8 { stroke: var(--blue); }
+.encl-line.types-ms { stroke: var(--sab); }
+.encl-pt.types-k8 { fill: var(--blue); } .encl-pt.types-ms { fill: var(--sab); }
+.encl-pt.hollow { fill: var(--paper); stroke: var(--blue); stroke-width: 3; }
+.encl-val.types-k8 { fill: var(--blue); } .encl-val.types-ms { fill: var(--sab); }
+.types-era { fill: var(--gold-soft); opacity: 0.35; }
+.sw.ln.types-k8 { border-top-color: var(--blue); } .sw.ln.types-ms { border-top-color: var(--sab); }
+.encl-mlab tspan.lc { text-transform: none; }
+
+/* Overview line chart: line weight and dots match the Enrollment charts (scaled from a 600-wide to a 680-wide viewBox) */
+.encl-line.types-k8, .encl-line.types-ms { stroke-width: 2.2; }
+.types-dot { stroke: var(--paper); stroke-width: 1.5; }
+.types-dot.types-k8 { fill: var(--blue); } .types-dot.types-ms { fill: var(--sab); }
+.types-dot.hollow { fill: var(--paper); stroke-width: 2; }
+.types-dot.ghost { opacity: 0.5; }
+.types-dot.types-k8.hollow { stroke: var(--blue); } .types-dot.types-ms.hollow { stroke: var(--sab); }
+.sw.ln.types-k8, .sw.ln.types-ms { border-top-width: 2.5px; }
+
+/* Overview line chart: label weights match the Enrollment charts (.sc-lhlab 800 14px label, .sc-fitlab 700 12px body), scaled to a 680-wide viewBox */
+.types .encl-val { font: 800 16px var(--label); }
+.types .encl-mlab { fill: var(--ink); font: 700 13.6px var(--body); letter-spacing: 0; text-transform: none; }
