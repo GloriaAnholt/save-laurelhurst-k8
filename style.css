@@ -971,3 +971,16 @@ a.num:hover { color: var(--red); }
 /* Overview line chart: label weights match the Enrollment charts (.sc-lhlab 800 14px label, .sc-fitlab 700 12px body), scaled to a 680-wide viewBox */
 .types .encl-val { font: 800 16px var(--label); }
 .types .encl-mlab { fill: var(--ink); font: 700 13.6px var(--body); letter-spacing: 0; text-transform: none; }
+
+/* Hidden costs: closed schools table */
+.closed-table { min-width: 620px; }
+.closed-table th, .closed-table td { text-align: left; vertical-align: top; }
+.closed-table tr.table-title th { font: 900 clamp(18px, 2.2vw, 22px)/1.2 var(--display); letter-spacing: 0; text-transform: none; color: var(--blue); padding-top: 16px; padding-bottom: 12px; border-bottom: 4px solid var(--gold); }
+.closed-table tr.section th { font: 800 13px/1.2 var(--label); letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue-deep); background: var(--blue-soft); padding-top: 10px; padding-bottom: 10px; }
+.closed-table tbody.reused tr.section th { border-top: 4px solid var(--gold); }
+.closed-table td.yr, .closed-table td.yrs { font: 800 18px/1.2 var(--label); white-space: nowrap; }
+.closed-table td.yrs strong { color: var(--red); font-weight: 900; }
+.closed-table td.yrs .nf { font: 600 14px/1.2 var(--body); color: var(--muted); }
+.closed-table td.since { font: 400 16px/1.45 var(--body); }
+.closed-table tbody th { white-space: nowrap; }
+@media (max-width: 719px) { .closed-table tbody th { white-space: normal; } .closed-table td.since { font-size: 15px; } }
