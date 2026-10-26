@@ -984,3 +984,15 @@ a.num:hover { color: var(--red); }
 .closed-table td.since { font: 400 16px/1.45 var(--body); }
 .closed-table tbody th { white-space: nowrap; }
 @media (max-width: 719px) { .closed-table tbody th { white-space: normal; } .closed-table td.since { font-size: 15px; } }
+.hl-blue { color: var(--blue); }
+
+/* Hidden costs: tax table */
+.tax-table { min-width: 720px; }
+.tax-table th, .tax-table td { text-align: left; vertical-align: top; }
+.tax-table tr.table-title th { font: 900 clamp(18px, 2.2vw, 22px)/1.2 var(--display); letter-spacing: 0; text-transform: none; color: var(--blue); padding-top: 16px; padding-bottom: 12px; border-bottom: 4px solid var(--gold); }
+.tax-table tbody th { font-size: 16px; line-height: 1.3; }
+.tax-table tbody th small { display: block; margin-top: 3px; font: 400 14px/1.3 var(--body); color: var(--muted); }
+.tax-table td { font: 400 15px/1.4 var(--body); }
+.tax-table td.chg .no { font: 800 17px/1.2 var(--label); color: var(--red); margin-right: 2px; }
+.callout b { font-weight: 900; }
+.hl-gold { color: var(--gold-bright); }
